@@ -13,14 +13,15 @@ import torch
 import os
 
 current_dir = os.path.dirname(os.path.realpath(__file__))
+model_dir = os.path.join(current_dir, './')
 
 #input_dir='D:\\OneDrive - BGR\\Analytics\\medical_intent_detector_using_BERT\\model'
 #input_dir=
 
 
-loaded_model = BertForSequenceClassification.from_pretrained('./')
+loaded_model = BertForSequenceClassification.from_pretrained(model_dir)
 loaded_model.eval()
-loaded_tokenizer = BertTokenizer.from_pretrained('./')
+loaded_tokenizer = BertTokenizer.from_pretrained(model_dir)
 loaded_df_label = pd.read_pickle('df_label.pkl')
 
 
