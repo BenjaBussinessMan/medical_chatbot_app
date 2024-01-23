@@ -4,4 +4,4 @@ joblib
 transformers
 torch
 torchvision
-libgl1-mesa-glx
+
