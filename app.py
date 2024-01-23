@@ -10,15 +10,18 @@ import pandas as pd
 import joblib
 from transformers import BertTokenizer, BertForSequenceClassification
 import torch
+import os
+
+current_dir = os.path.dirname(os.path.realpath(__file__))
 
 #input_dir='D:\\OneDrive - BGR\\Analytics\\medical_intent_detector_using_BERT\\model'
-input_dir='model'
+#input_dir=
 
 
-loaded_model = BertForSequenceClassification.from_pretrained(input_dir)
+loaded_model = BertForSequenceClassification.from_pretrained(current_dir)
 loaded_model.eval()
-loaded_tokenizer = BertTokenizer.from_pretrained(input_dir)
-loaded_df_label = pd.read_pickle('model\df_label.pkl')
+loaded_tokenizer = BertTokenizer.from_pretrained(current_dir)
+loaded_df_label = pd.read_pickle('df_label.pkl')
 
 
 # test the model on an unseen example
