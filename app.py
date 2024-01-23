@@ -18,9 +18,9 @@ current_dir = os.path.dirname(os.path.realpath(__file__))
 #input_dir=
 
 
-loaded_model = BertForSequenceClassification.from_pretrained(current_dir)
+loaded_model = BertForSequenceClassification.from_pretrained('./')
 loaded_model.eval()
-loaded_tokenizer = BertTokenizer.from_pretrained(current_dir)
+loaded_tokenizer = BertTokenizer.from_pretrained('./')
 loaded_df_label = pd.read_pickle('df_label.pkl')
 
 
