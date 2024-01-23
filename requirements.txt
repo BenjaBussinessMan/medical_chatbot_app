@@ -1,7 +1,7 @@
 ﻿streamlit
 pandas
 joblib
-transformers==4.37.0
-torch==2.1.0
+transformers
+torch
 torchvision
 libgl1-mesa-glx
